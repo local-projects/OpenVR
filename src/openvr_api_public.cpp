@@ -120,7 +120,7 @@ EVRInitError VR_LoadHmdSystemInternal()
 	}
 
 // [BEN SNELL] The correct vrclient.dll was not being called with the macro WIN64, so I changed the macro to _WIN64 to ensure that vrclient.dll would be called on 64 bit architectures.
-#if defined( _WIN64 )
+#if defined( WIN64 ) || defined( _WIN64 )
 	std::string sDLLPath = Path_Join( sTestPath, "vrclient_x64" DYNAMIC_LIB_EXT );
 #else
 	std::string sDLLPath = Path_Join( sTestPath, "vrclient" DYNAMIC_LIB_EXT );
