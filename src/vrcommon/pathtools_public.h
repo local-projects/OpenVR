@@ -112,7 +112,7 @@ bool Path_UnlinkFile( const std::string &strFilename );
 #endif
 
 //-----------------------------------------------------------------------------
-#if defined(WIN32)
+#if defined(WIN32) || defined (_WIN32)
 #define DYNAMIC_LIB_EXT	".dll"
 #define PROGRAM_EXT ".exe"
 #ifdef _WIN64
